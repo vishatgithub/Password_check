@@ -1,17 +1,18 @@
 def pass_check(func):
-    def inner(password):
-        if password != "Sumeet01":
-            print("Incorrect password !!!")
+    def inner(password,ID):
+        if password != "user1234" and ID != "USERID" :
+            print("Incorrect password  and ID !!!")
         else:
-            func(password)
+            func(password,ID)
     return inner
 @pass_check
-def check(password):
+def check(password,ID):
     print("Logged in successfully !")
 while True:
     a = input("Enter your password : ")
-    check(a)
-    if a == "Sumeet01":
+    b = input("Enter user ID : ")
+    check(a,b)
+    if a == "user1234" and b == "USERID":
         break
 
 
